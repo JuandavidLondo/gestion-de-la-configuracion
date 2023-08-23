@@ -61,7 +61,7 @@ public class Grid : MonoBehaviour
         {
             for(int y=0; y < yDim; y++)
             {
-                GameObject background = (GameObject)Instantiate(backgroundPrefab, GetWorldPosition(x, y), Quaternion.identity);
+                GameObject background = (GameObject)Instantiate(backgroundPrefab, GetWorldPosition2(x, y,11), Quaternion.identity);
                 background.transform.parent = transform;
                 SpriteRenderer spriteRenderer = background.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
@@ -210,6 +210,10 @@ public class Grid : MonoBehaviour
     public Vector2 GetWorldPosition(int x,int y)
     {
         return new Vector2(transform.position.x - xDim/2.5f + x, transform.position.y + yDim/2.5f - y);
+    }
+    public Vector3 GetWorldPosition2(int x, int y,int  z)
+    {
+        return new Vector3(transform.position.x - xDim / 2.5f + x, transform.position.y + yDim / 2.5f - y,z);
     }
     public GamePiece SpawnNewPiece(int x, int y, PieceType type)
     {
