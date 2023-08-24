@@ -1,26 +1,37 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ClearLinePiece
     - ClearablePiece
     - ColorPiece
     - GamePiece
     - Grid
+    - LevelMoves
     - MovablePiece
     - Prieba
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -40,6 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Map.unity:
@@ -55,6 +67,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -64,21 +78,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1694}
     - Class: 114
+      Script: {instanceID: 1816}
+    - Class: 114
+      Script: {instanceID: 2196}
+    - Class: 114
       Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 2996}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3244}
     - Class: 114
-      Script: {instanceID: 4550}
+      Script: {instanceID: 3358}
     - Class: 114
-      Script: {instanceID: 4658}
+      Script: {instanceID: 4556}
+    - Class: 114
+      Script: {instanceID: 4664}
+    - Class: 114
+      Script: {instanceID: 4690}
+    - Class: 114
+      Script: {instanceID: 5066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,28 +145,38 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2204}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 1704}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 1816}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 2246}
     - Class: 114
-      Script: {instanceID: 2996}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 2694}
     - Class: 114
-      Script: {instanceID: 3702}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 4090}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 5618}
+      Script: {instanceID: 3116}
+    - Class: 114
+      Script: {instanceID: 3244}
+    - Class: 114
+      Script: {instanceID: 3358}
+    - Class: 114
+      Script: {instanceID: 3708}
+    - Class: 114
+      Script: {instanceID: 4096}
+    - Class: 114
+      Script: {instanceID: 4654}
+    - Class: 114
+      Script: {instanceID: 5624}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -221,7 +255,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 782033254a0eefa34f109fed4695b259
+      Hash: a1567604c8166e923e84fb386e2fd9fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Prieba
@@ -269,6 +303,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 93cb904d471529a04b96eb31f1ceb81f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelMoves
+  - hash:
+      serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -299,7 +339,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: bfdf060b2603148594c3c06838d1c1db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePiece
@@ -383,6 +423,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 4f18e9c23011bd2a61a636ba224004ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClearLinePiece
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -405,6 +451,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 64b568116efad14698de249f79d9db98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Level
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -449,7 +501,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 1f75f2226d7efc8b584c7a740d11b22a
+      Hash: 5144dfc5c6bdb7d4a2a9df6ced647721
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Grid

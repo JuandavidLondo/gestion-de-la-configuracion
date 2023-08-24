@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class Level : MonoBehaviour
@@ -11,7 +12,7 @@ public class Level : MonoBehaviour
         OBSTACLE,
         MOVES,
     };
-    public Text puntajeCanva;
+    public TextMeshProUGUI puntajeCanva;
     public Grid grid;
     public int score1Star;
     public int score2Star;
@@ -36,13 +37,13 @@ public class Level : MonoBehaviour
     public virtual void GameWin()
     {
         Debug.Log("Ganaste");
-        puntajeCanva.text = "Ganaste";
+        puntajeCanva.GetComponent<TextMeshProUGUI>().text = "Ganaste";
         grid.GameOver();
     }
     public virtual void GameLose()
     {
         Debug.Log("Perdiste");
-        puntajeCanva.text = "Perdiste";
+        puntajeCanva.GetComponent<TextMeshProUGUI>().text = "Perdiste";
         grid.GameOver();
     }
     public virtual void OnMove()
