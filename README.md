@@ -33,6 +33,8 @@
   - Esta se encuentra entrando a la carpeta donde clonamos el repositorio, y dentro de ella hay una carpeta llamada “Cat Crush Saga!”, abrimos esa carpeta y copiamos su dirección.
 1. el comando debe quedar tal que asi: `"C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe"  -projectPath "C:\Users\juand\Desktop\g\gestion-de-la-configuracion\Cat Crush Saga!" -executeMethod StandaloneWindous64`, donde la primera parte es la ruta hacia el archivo unity y la segunda es la ruta a la carpeta clonada del repositorio de github.
 1. Luego ejecutamos el comando anterior y este nos abrirá una nueva ventana la cual será el juego en el entrono de desarollo de unity.
+> [!NOTE]
+> Si al ejecutar el codigo y abrir unity te sale un aviso que diga "Opening project in  Non-Matching editor instalation" Presionar el boton de Continue y esperar.
 1. Luego de que cargue por completo le damos a “File” en la esquina superior izquierda de la pantalla, después de que se despliegue  el menú, le damos a la opción “Build settings”.
 1. Al seleccionar “build setting” se nos abrirá una pestaña dentro de unity, en la cual nos fijamos si en platform, la opción “Pc, Mac & Linux StandAlone” está seleccionada en azul, si no es así, la seleccionamos.
 1. Para finalizar, le damos a la opción Build, seleccionamos la carpeta donde queremos que se compile el juego y esperamos.
